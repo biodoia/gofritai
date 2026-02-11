@@ -31,11 +31,6 @@ var statusCmd = &cobra.Command{
 		fmt.Printf("   %-20s %s\n", "Fly.io", "✅ 3 VMs / 160GB (12% used)")
 		fmt.Printf("   %-20s %s\n", "Render", "✅ 750h/mo (45% used)")
 		fmt.Println()
-		fmt.Println("🧠 LLM APIs")
-		fmt.Printf("   %-20s %s\n", "Groq", "✅ 30 req/min (OK)")
-		fmt.Printf("   %-20s %s\n", "Google AI", "✅ 60 req/min (OK)")
-		fmt.Printf("   %-20s %s\n", "OpenRouter", "✅ Free models available")
-		fmt.Println()
 		fmt.Println("🗄️  DATABASES")
 		fmt.Printf("   %-20s %s\n", "Supabase", "✅ 500MB (23% used)")
 		fmt.Printf("   %-20s %s\n", "Turso", "✅ 9GB (5% used)")
@@ -57,13 +52,7 @@ var listCmd = &cobra.Command{
 			{"Render", "750h/mo", "No CC"},
 			{"Cloudflare Workers", "100k req/day", "No CC"},
 		})
-		printCategory("LLM APIs", []Provider{
-			{"Groq", "30 req/min, Llama/Mixtral/Whisper", "No CC"},
-			{"Google AI Studio", "60 req/min, Gemini 2.5", "No CC"},
-			{"OpenRouter", "Free models", "No CC"},
-			{"DeepSeek", "Generous limits", "No CC"},
-			{"Cerebras", "Fast Llama 70B", "No CC"},
-		})
+		// LLM APIs managed by bifrost-free gateway, not here
 		printCategory("DATABASES", []Provider{
 			{"Supabase", "500MB Postgres + Auth", "No CC"},
 			{"Turso", "9GB + 500M reads", "No CC"},

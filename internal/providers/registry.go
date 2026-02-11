@@ -101,50 +101,7 @@ var Registry = []Provider{
 		URL:        "https://workers.cloudflare.com",
 	},
 
-	// LLM APIs
-	{
-		ID:       "groq",
-		Name:     "Groq",
-		Category: CategoryLLM,
-		FreeTier: FreeTier{
-			Description: "30 req/min, Llama/Mixtral/Whisper",
-			Limits: []Limit{
-				{Resource: "requests", Amount: 30, Unit: "requests", Period: "minute"},
-			},
-			Duration: "forever",
-		},
-		RequiresCC:  false,
-		URL:         "https://groq.com",
-		APIEndpoint: "https://api.groq.com/openai/v1",
-	},
-	{
-		ID:       "google-ai-studio",
-		Name:     "Google AI Studio",
-		Category: CategoryLLM,
-		FreeTier: FreeTier{
-			Description: "60 req/min, Gemini 2.5 Pro/Flash",
-			Limits: []Limit{
-				{Resource: "requests", Amount: 60, Unit: "requests", Period: "minute"},
-			},
-			Duration: "forever",
-		},
-		RequiresCC:  false,
-		URL:         "https://aistudio.google.com",
-		APIEndpoint: "https://generativelanguage.googleapis.com/v1beta",
-	},
-	{
-		ID:       "openrouter",
-		Name:     "OpenRouter",
-		Category: CategoryLLM,
-		FreeTier: FreeTier{
-			Description: "Free models available",
-			Limits:      []Limit{},
-			Duration:    "forever",
-		},
-		RequiresCC:  false,
-		URL:         "https://openrouter.ai",
-		APIEndpoint: "https://openrouter.ai/api/v1",
-	},
+	// LLM APIs → managed by bifrost-free gateway (separate module)
 
 	// Databases
 	{
