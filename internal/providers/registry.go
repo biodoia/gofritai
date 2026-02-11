@@ -101,7 +101,7 @@ var Registry = []Provider{
 		URL:        "https://workers.cloudflare.com",
 	},
 
-	// LLM APIs → managed by bifrost-free gateway (separate module)
+	// LLM APIs → managed by gogatewai (separate module)
 
 	// Databases
 	{

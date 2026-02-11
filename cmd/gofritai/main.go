@@ -52,7 +52,7 @@ var listCmd = &cobra.Command{
 			{"Render", "750h/mo", "No CC"},
 			{"Cloudflare Workers", "100k req/day", "No CC"},
 		})
-		// LLM APIs managed by bifrost-free gateway, not here
+		// LLM APIs managed by gogatewai, not here
 		printCategory("DATABASES", []Provider{
 			{"Supabase", "500MB Postgres + Auth", "No CC"},
 			{"Turso", "9GB + 500M reads", "No CC"},
